@@ -81,19 +81,18 @@ h1 {
 
     /* altezza del contenitore
     data per debug iniziale */
-    height: 400px;
+    /* height: 400px; */
 }
 
 /* BOTTONI */
-
-/* rettangolo contenente i bottoni */
+/* spazio contenente i bottoni */
 #buttons {
     /* padding verticale 0, padding orizzontale x
     per distanziarlo dal bordo */
     padding: 0 50px;
-    /* altezza della sezione */
+    /* altezza dell'area contenuto */
     height: 60px;
-    /* altezza della linea */
+    /* altezza del contenuto */
     line-height: 60px;
     /* bordo separatore BOTTONI e TO DO LIST
     dimensione che si sottrae al rettangolo bianco */
@@ -132,3 +131,16 @@ per le caratteristiche condivise dei bottoni */
     color: grey;
 }
 
+/* LISTA */
+#list {
+    padding: 50px;
+}
+
+li {
+    list-style: none;
+    padding: 10px;
+}
+
+h3 {
+    display: inline-block;
+}
