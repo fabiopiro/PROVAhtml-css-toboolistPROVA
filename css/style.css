@@ -1,5 +1,134 @@
+/* ordine delle istruzioni css
+* {
+    display
+    dimensione
+    stile
+ }
+  */
+
+/* common */
+
+/* RESET dei valori di default per la gestione del layout
+in questo modo i vari margin, padding, border...ecc
+non si sommano alla grandezza del blocco ma ne fanno parte */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-color: grey;
+}
+
+/* HEADER */
+header {
+    /* altezza del rettangolo bianco */
+    height: 100px;
+
+    /* 1Fase Centratura Elementi
+    dare una line-height AL PADRE
+    2Fase dare un vertical-align: middle; AI FIGLI */
+    line-height: 100px;
+
+    /* padding verticale 0, padding orizzontale x
+    per distanziarlo dal bordo */
+    padding: 0 50px;
+
+    /* margine/spazio basso
+    tra questo elemento e il prossimo */
+    margin-bottom: 50px;
+
+    background-color: white;
+}
+
+h1 {
+    /* trasforma l'h1, che è di tipo block,in tipo inline
+    così da poterlo affiancare al logo.
+    normalmente l'h1 occuperebbe tutto il blocco
+    e in questo caso finirebbe al di sotto del logo */
+    display: inline-block;
+
+    /* 2Fase Centratura Elementi
+    vertical-align: middle; AI FIGLI */
+    vertical-align: middle;
+}
+
+#logo {
+    /* altezza del logo
+    è sempre meglio agire solo su una dimensione
+    tra height e width (in base al layout)
+    quando settiamo le dimensioni di un'immagine */
+    height: 50px;
+
+    /* 2Fase Centratura Elementi
+    vertical-align: middle; AI FIGLI */
+    vertical-align: middle;
+}
+
+/* IL CONTENITORE-RETTANGOLO BIANCO */
+.container {
+    /* larghezza del contenitore */
+    width: 50%;
+
+    /* margini automatici-posizionamento centrale */
+    margin: auto;
+
+    /* arrotondamento bordo */
+    border-radius: 10px;
+
+    background-color: white;
+
+    /* altezza del contenitore
+    data per debug iniziale */
+    height: 400px;
+}
+
+/* BOTTONI */
+
+/* rettangolo contenente i bottoni */
+#buttons {
+    /* padding verticale 0, padding orizzontale x
+    per distanziarlo dal bordo */
+    padding: 0 50px;
+    /* altezza della sezione */
+    height: 60px;
+    /* altezza della linea */
+    line-height: 60px;
+    /* bordo separatore BOTTONI e TO DO LIST
+    dimensione che si sottrae al rettangolo bianco */
+    border-bottom: 5px solid grey;
+}
+
+/* sono dei link che dobbiamo trasformare graficamente */
+
+/* classe .btn
+per le caratteristiche condivise dei bottoni */
+.btn {
+    /* perchè vogliamo affiancare e settare le dimensioni */
+    display: inline-block;
+    /* padding verticale 5px e orizontale 10px */
+    padding: 5px 10px;
+    /* arrotondamento bordo */
+    border-radius: 5px;
+    /* elimina le decorazioni di default
+    quali ad esempio la sottolineatura del link */
+    text-decoration: none;
+    /* altezza della linea*/
+    line-height: 20px;
+}
+/* classe specifica per il bottone task */
+.btn-task {
+    background-color: blue;
+    /* bordo del tasto */
+    border: 1px solid blue;
+    /* colore del testo */
+    color: white;
+}
+/* classe specifica per il bottone section */
+.btn-section {
+    background-color: white;
+    border: 1px solid grey;
+    color: grey;
+}
+
